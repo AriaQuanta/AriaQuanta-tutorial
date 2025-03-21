@@ -130,8 +130,6 @@ You can access the complete documentation online through GitHub Pages. Follow th
 [Online Documentation](https://github.com/AriaQuanta/AriaQuanta-tutorial/blob/main/docs/AriaQuanta_tutorials.ipynb).
 
 
-https://github.com/AriaQuanta/AriaQuanta-tutorial/blob/main/docs/AriaQuanta_tutorials.ipynb
-
 # Paper
 
 Our paper introduces and thoroughly details this quantum software. This paper offers an in-depth overview of the methodology underlying AriaQuanta, encompassing its design principles and implementation details.
