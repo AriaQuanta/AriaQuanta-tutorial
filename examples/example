@@ -1,9 +1,0 @@
-```ruby
-from AriaQuanta.aqc.gatelibrary import H, CX
-from AriaQuanta.aqc.circuit import Circuit
-qc = Circuit(2)         # Create a 2-qubit quantum circuit
-qc | H(0) | CX(0,1)    # Add Hadamard gate on qubit 1 and  a CX gate between qubits 1 and 2
-qc.run()                # run quantum circuit
-print("\nstate vector: ", qc.statevector)  
-print("\ndensity matrix: ", qc.density_matrix)
-```
