@@ -1,47 +1,9 @@
-from AriaQuanta.aqc import Circuit, MeasureQubit, If_cbit, create_state
-from AriaQuanta.aqc.gatelibrary import H, CX, Z, X
-
-#--------------------------------------------------
-# define qubits with optional states
-
-alpha = 0.3
-# create qubit=0 with state alpha|0>+beta|1>
-q0 = create_state(0,alpha) 
-
-# create qubit=1 with state |0>
-q1 = create_state(1,1)
-
-# create qubit=2 with state |0>
-q2 = create_state(2,1)
-
-print("\nq0 state =\n", q0.state)
-print("\nq1 state =\n", q1.state)
-print("\nq2 state =\n", q2.state)
-
-#--------------------------------------------------
-# add qubits to a circuit
-qc = Circuit(3, list_of_qubits=[q0, q1, q2])
-
-print("\ninitial state of the circuit:\n", qc.statevector)
-
-#--------------------------------------------------
-# Make the shared entangled state 
-qc | H(1)
-qc | CX(1, 2)
-
-# Alice applies teleportation gates (or projects to Bell basis)
-qc | CX(0, 1)
-qc | H(0)
-
-# Alice measures her qubits
-qc | MeasureQubit([0,1], ['a','b'])
-
-# Bob applies certain gates based on the outcome of Alice's measurements
-qc | If_cbit(['a',1], Z(2))
-qc | If_cbit(['b',1], X(2))
-
-#--------------------------------------------------
-# simple run and output the statevector
-# Bob checks the state of the teleported qubit
-qc.run()
-print("\nBob's statevector:\n", qc.statevector)
+```ruby
+from AriaQuanta.aqc.gatelibrary import H, CX
+from AriaQuanta.aqc.circuit import Circuit
+qc = Circuit(2)         # Create a 2-qubit quantum circuit
+qc | H(0) | CX(0,1)    # Add Hadamard gate on qubit 1 and  a CX gate between qubits 1 and 2
+qc.run()                # run quantum circuit
+print("\nstate vector: ", qc.statevector)  
+print("\ndensity matrix: ", qc.density_matrix)
+```
