@@ -127,7 +127,10 @@ plot_histogram(counts)
 # Documentation
 
 You can access the complete documentation online through GitHub Pages. Follow the link below for comprehensive explanations and step-by-step tutorials
+[Online Documentation](https://github.com/AriaQuanta/AriaQuanta-tutorial/blob/main/docs/AriaQuanta_tutorials.ipynb).
 
+
+https://github.com/AriaQuanta/AriaQuanta-tutorial/blob/main/docs/AriaQuanta_tutorials.ipynb
 
 # Paper
 
