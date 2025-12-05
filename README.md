@@ -23,6 +23,7 @@ AriaQuanta is available on both `pip` and `conda`. You can install AriaQuanta  f
 
 ```ruby
 pip install AriaQuanta
+New Version pip install AriaQuantum
 ```
 For verify installation  by loading following command
 ```ruby
